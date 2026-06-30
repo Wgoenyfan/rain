@@ -1,7 +1,21 @@
 ---
 layout: default
 ---
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+<style>
+body {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-size: 18px;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  cursor: zoom-in;
+}
+</style>
 <h1>{{ page.title }}</h1>
 <p>发布时间：{{ page.date | date: "%Y-%m-%d" }}</p>
 <hr>
