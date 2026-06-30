@@ -4,6 +4,4 @@ date: 2026-06-30
 tags: 学习笔记 GitHub博客
 layout: post
 ---
-<a href="https://github.com/user-attachments/assets/8d57720f-ea82-430a-8397-0d4e488bc020" target="_blank">
-  <img style="max-width:100%;height:auto;cursor:zoom-in;" alt="雨世界地图缩略图" src="{{ site.baseurl }}/thumb-map.jpg" />
-</a>
+<img width="11052" height="7261" alt="雨世界地图" src="https://github.com/user-attachments/assets/28ca6452-94e9-4a9f-abc8-e2fde112bc21" />
