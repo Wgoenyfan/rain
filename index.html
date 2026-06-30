@@ -1,4 +1,4 @@
----
+ ---
 layout: default
 title: 首页
 ---
@@ -7,6 +7,27 @@ title: 首页
 <head>
   <meta charset="utf-8">
   <title>{{ site.title }}</title>
+  <style>
+    body {
+      /* 限制内容宽度，不会铺满全屏，左右留出空白 */
+      max-width: 800px;
+      /* 自动左右居中 */
+      margin: 40px auto;
+      /* 左右内边距，避免贴屏幕边缘 */
+      padding: 0 20px;
+      font-size: 18px;
+    }
+    h1 {
+      font-size: 42px;
+      margin: 10px 0;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+    .post-item {
+      margin: 20px 0;
+    }
+  </style>
 </head>
 <body>
   <h1>{{ site.title }}</h1>
@@ -14,8 +35,7 @@ title: 首页
 
   <h2>文章列表</h2>
   {% for post in site.posts %}
-    <div style="margin:10px 0;">
-      <!-- 只保留标题链接，点击进入详情页 -->
+    <div class="post-item">
       <h3>
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
       </h3>
