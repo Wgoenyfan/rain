@@ -5,41 +5,76 @@ title: 首页
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>{{ site.title }}</title>
-  <style>
-    body {
-      /* 限制内容宽度，不会铺满全屏，左右留出空白 */
-      max-width: 800px;
-      /* 自动左右居中 */
-      margin: 40px auto;
-      /* 左右内边距，避免贴屏幕边缘 */
-      padding: 0 20px;
-      font-size: 18px;
-    }
-    h1 {
-      font-size: 42px;
-      margin: 10px 0;
-    }
-    h2 {
-      margin-top: 40px;
-    }
-    .post-item {
-      margin: 20px 0;
-    }
-  </style>
+<meta charset="utf-8">
+<title>{{ site.title }}</title>
+<style>
+/* 全局页面容器 */
+body {
+    /* 顶部距离顶部边缘60px，左右边距20px，底部留白 */
+    margin: 60px 20px;
+    /* 最大宽度限制，大屏幕不会无限拉长 */
+    max-width: 900px;
+    font-family: system-ui, sans-serif;
+}
+/* 主标题Rain */
+h1 {
+    font-size: 48px;
+    margin: 0 0 10px 0;
+}
+/* 分割线 */
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 12px 0 24px 0;
+}
+/* 描述文字 */
+.desc {
+    font-size: 22px;
+    color: #333;
+    margin: 0 0 36px 0;
+}
+/* 文章列表标题 */
+h2 {
+    font-size: 36px;
+    margin: 0 0 12px 0;
+}
+/* 单篇文章条目 */
+.post-item {
+    margin: 24px 0;
+}
+/* 文章标题链接 */
+.post-item h3 {
+    font-size: 32px;
+    margin: 0;
+}
+.post-item a {
+    color: #2563eb;
+    text-decoration: none;
+}
+.post-item a:hover {
+    text-decoration: underline;
+}
+/* 日期文字 */
+.post-date {
+    font-size: 20px;
+    color: #444;
+    margin-top: 8px;
+    display: block;
+}
+</style>
 </head>
 <body>
   <h1>{{ site.title }}</h1>
-  <p>{{ site.description }}</p>
+  <hr>
+  <p class="desc">{{ site.description }}</p>
 
   <h2>文章列表</h2>
+  <hr>
+
   {% for post in site.posts %}
     <div class="post-item">
-      <h3>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </h3>
-      <span>{{ post.date | date: "%Y-%m-%d" }}</span>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
     </div>
   {% endfor %}
 </body>
