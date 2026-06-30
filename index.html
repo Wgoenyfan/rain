@@ -9,8 +9,9 @@ title: 首页
 <title>{{ site.title }}</title>
 <style>
 body {
-    margin: 60px 20px;
+    margin: 60px auto;
     max-width: 900px;
+    padding: 0 20px;
     font-family: system-ui, sans-serif;
 }
 /* 主标题Rain 黑色无链接 */
@@ -66,7 +67,8 @@ h2 {
 
   {% for post in site.posts %}
     <div class="post-item">
-      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+</h3>
       <span class="post-date">{{ post.date | date: "%Y-%m-%d" }}</span>
     </div>
   {% endfor %}
