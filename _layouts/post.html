@@ -3,20 +3,35 @@ layout: default
 ---
 <style>
 body {
-  max-width: 800px;
-  margin: 40px auto;
-  padding: 0 20px;
-  font-size: 18px;
+    margin: 60px auto;
+    max-width: 900px;
+    padding: 0 20px;
+    font-family: system-ui, sans-serif;
+}
+/* 文章标题浅蓝色 */
+h1 {
+    font-size: 42px;
+    margin: 0 0 10px;
+    color: #2563eb;
+}
+hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 12px 0 20px;
+}
+.post-time {
+    font-size: 20px;
+    color: #444;
 }
 img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 20px auto;
-  cursor: zoom-in;
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    display: block;
 }
 </style>
 <h1>{{ page.title }}</h1>
-<p>发布时间：{{ page.date | date: "%Y-%m-%d" }}</p>
+<hr>
+<p class="post-time">发布时间：{{ page.date | date: "%Y-%m-%d" }}</p>
 <hr>
 {{ content }}
